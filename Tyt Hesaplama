@@ -83,21 +83,21 @@ let SosyalPuan = (ToplamSosyal*1.36)
 let ToplamPuan = (MatPuan+TurkcePuan+FenPuan+SosyalPuan)
 
 
+if(OBP > 500 || OBP < 50 ){
+alert("Geçersiz değer girdiniz")
 
-if(OBP > 100){
+}
+else if(OBP > 100){
     let Okulpuani = OBP * 0.12
     let Toplam = Okulpuani + ToplamPuan
     alert("Aldığınız toplam puan: " + Toplam)
 }
-else if(OBP <= 100){
+else {
 let Okulpuani = OBP*0.6
 let Toplam = OBP + ToplamPuan
 alert("Aldığınız toplam puan: " + Toplam)
 }
-if(OBP > 500){
-alert("Geçersiz değer girdiniz")
 
-}
 
 
 
