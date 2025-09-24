@@ -1,0 +1,104 @@
+
+let MatDogru = Number(prompt("Matematik tesinden yaptığınız doğru sayısınnı giriniz"))
+if (MatDogru > 40){
+alert("Doğru sayısını yanlış girdiniz :D")
+    throw "Geçersiz giriş";
+}
+let MatYanlis = Number(prompt("Matematik testinden yaptığınız yanlış sayısını giriniz"))
+if(MatYanlis > 40){
+alert("Yanlış yanlış değeri girdiniz")
+throw "Geçersiz giriş";
+
+
+}
+let ToplamMatematik = MatDogru + MatYanlis
+if (ToplamMatematik > 40 ){
+alert("Geçersiz Matematik neti girdiniz doğru ve yanlışları kontrol ediniz")
+throw "Geçersiz giriş";
+}
+let TurkceDogru = Number(prompt("Türkçe tesinden yaptığınız doğrusayısını giriniz"))
+if (TurkceDogru > 40 ){ 
+    alert("Doğru sayısını Yanlış girdiniz")
+throw "Geçersiz giriş";
+}
+let TurkceYanlis = Number(prompt("Türkçe testinden yaptığınız yanlış sayısını giriniz"))
+if(TurkceYanlis > 40){
+    alert("Yanlış yanlış değeri girdiniz")
+throw "Geçersiz giriş";
+}
+let ToplamTurkceneti = TurkceDogru + TurkceYanlis
+if (ToplamTurkceneti> 40 ){
+alert("Geçersiz Türkçe neti girdiniz doğru ve yanlışları kontrol ediniz")
+throw "Geçersiz giriş";
+}
+let FenDogru = Number(prompt("Fen Bilimleri testinden yaptığınız doğru sayısını giriniz"))
+if(FenDogru > 40){
+alert("Doğru sayısını Yanlış girdiniz")
+throw "Geçersiz giriş";
+}
+let FenYanlis = Number(prompt("Fen Bilimleri testinden yaptığınız yanlış sayısını giriniz"))
+if(FenYanlis > 40){
+alert("Yanlış yanlış değeri girdiniz")
+throw "Geçersiz giriş";
+}
+let FenNeti = FenDogru + FenYanlis
+if (FenNeti > 40 ){
+alert("Geçersiz Fen bilimleri neti girdiniz doğru ve yanlışları kontrol ediniz")
+throw "Geçersiz giriş";
+}
+let SosyalDogru = Number(prompt("Sosyal Bilimler testinden yaptığınız doğru sayısını giriniz"))
+if(SosyalDogru > 40) {
+alert("Doğru sayısını yanlış girdiniz :D")
+throw "Geçersiz giriş";
+}
+let SosyalYanlis = Number(prompt("Sosyal Bilimler yaptığınız yanlış sayısını giriniz"))
+if(SosyalYanlis > 40){
+    alert("Yanlış yanlış değeri girdiniz")
+ throw "Geçersiz giriş";
+}
+let SosyalNeti = SosyalDogru + SosyalYanlis
+if (SosyalNeti > 40 ){
+alert("Geçersiz Sosyal bilimler neti girdiniz doğru ve yanlışları kontrol ediniz")
+throw "Geçersiz giriş";
+}
+
+
+let OBP = Number(prompt("Diploma notunuzu 50-100 arasından giriniz veya OBP nizi giriniz"))
+
+/*TYT kısmı için netlerinizi: Türkçe=1.32 Matematik=1.32 Sosyal Bilimler=1.36 Fen Bilimleri=1.36
+Kaynak: https://blog.hocalarageldik.com/tyt-puan-hesaplama-net-katsayilari/#:~:text=TYT%20k%C4%B1sm%C4%B1%20i%C3%A7in%20netlerinizi%3A%20T%C3%BCrk%C3%A7e,%3D3%2C07%20ile%20%C3%A7arp%C4%B1n.
+*/
+ /* 50 ve 100 arasında oluşacak olan diploma notunuzu %60'ı size ortaöğretim başarı puanınızı verecektir
+ https://rumeli.edu.tr/uploads/aday/YKS/OBP-ORTA____RET__M_BA__ARI_PUANI_NED__R.pdf
+ */
+let ToplamMat = MatDogru-(MatYanlis/4)
+let MatPuan = (ToplamMat*1.32)
+let ToplamTurkce = TurkceDogru-(TurkceYanlis/4)
+let TurkcePuan = (ToplamTurkce*1.32)
+let ToplamFen = FenDogru-(FenYanlis/4)
+let FenPuan = (ToplamFen*1.36)
+let ToplamSosyal = SosyalDogru-(SosyalYanlis/4)
+let SosyalPuan = (ToplamSosyal*1.36)
+
+let ToplamPuan = (MatPuan+TurkcePuan+FenPuan+SosyalPuan)
+
+
+
+if(OBP > 100){
+    let Okulpuani = OBP * 0.12
+    let Toplam = Okulpuani + ToplamPuan
+    alert("Aldığınız toplam puan: " + Toplam)
+}
+else if(OBP <= 100){
+let Okulpuani = OBP*0.6
+let Toplam = OBP + ToplamPuan
+alert("Aldığınız toplam puan: " + Toplam)
+}
+if(OBP > 500){
+alert("Geçersiz değer girdiniz")
+
+}
+
+
+
+
