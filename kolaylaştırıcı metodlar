@@ -1,0 +1,34 @@
+---------- Ters çevirme ----------
+
+function TersCevir(){
+let Kelime = prompt ("Kelimeyi giriniz")
+let Cevir = " "
+for(i=Kelime.length-1 ; i>=0 ;  i--){
+Cevir += Kelime.charAt(i)
+}
+console.log(Cevir)
+}
+TersCevir() 
+---------- Karşılama Fonksiyonu  ----------
+
+function Hoşgeldiniz(){
+    let name = prompt ("İsminiz?")
+let simdi = new Date();
+let saat = simdi.getHours();
+let dakika = simdi.getMinutes();
+let gun = simdi.getDate();
+let ay = simdi.getMonth() + 1;
+let yil = simdi.getFullYear();
+if(saat<10){
+    saat = "0" + saat}
+if(dakika<10){
+dakika = "0" + dakika}
+if (ay<10){
+ay = "0" + ay}
+if (gun<10){
+gun = "0" + gun}
+console.log("Hoşgeldiniz " + name + " Saat " + saat + "."+ dakika + " itibariyle sitemize giriş yaptınız. Bugünün tarihi " + gun + "/" + ay + "/" + yil  )
+}
+Hoşgeldiniz()
+
+----------   ----------
