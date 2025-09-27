@@ -1,0 +1,173 @@
+
+
+
+let now = new Date()
+let tarih = now.getFullYear()
+let ay = now.getMonth() + 1
+let gun = now.getDate()
+let bosluk = "\n"
+let yapilacakİslem = prompt(" 1- Yıl olarak yaş hesaplama" + bosluk + "2- Yaşınızı ay ve yıl olarak hesaplama "+ bosluk + "3- Yaşınızı tam olarak hesaplama ")
+
+//Yıl olarak hesaplamak için
+// number a çevirmek kendinize kalmış "" string tipi ile de if kodlanabilir
+if (yapilacakİslem == 1){
+let alinan = Number(prompt("Doğum yılınızı giriniz"))
+if(alinan.toString().length == 4){
+if(alinan<1900 || alinan>tarih){
+console.log("yanlış değer")
+}
+else{
+let yas = (tarih-alinan)
+console.log("Yaşınız: " + yas)
+}}
+else{
+console.log("Yanlış değer girdiniz")
+
+}}
+//Ay ve yıl olarak hesaplama
+else if(yapilacakİslem == 2){
+    let dogduguAy = Number(prompt("Doğduğunuz ayı olarak giriniz"))
+if(dogduguAy <= 12 && dogduguAy > 0){
+     let alinan = Number(prompt("Doğum yılınızı giriniz"))
+     if(alinan>1900 && alinan<=tarih){
+  if(dogduguAy > ay ){
+console.log("Şu an " + (ay + 12 - dogduguAy) + " Ay " + (tarih-alinan)+ " Yaşındasınız" )
+}else{
+console.log(( "Şu an" + (ay-dogduguAy) + " Ay " + (tarih-alinan) + " yaşındasınız"))
+}
+}else{console.log("Yanlış değer girdiniz")
+}}else{console.log("Geçersiz değer")}
+}
+
+// Ay gün yıl
+else if (yapilacakİslem == 3){
+let dogdugunGun = Number(prompt("Doğduğunuz günü yazınız"))
+if(dogdugunGun< 31 && dogdugunGun > 0 ){
+let dogduguAy = Number(prompt("Doğduğunuz ayı olarak giriniz"))
+if(dogduguAy>0 && dogduguAy<=12){
+let alinan = Number(prompt("Doğum yılınızı giriniz"))
+if (dogduguAy == 2 && (alinan%4)== 0 ){
+if(dogdugunGun<=29 && dogdugunGun > 0 && alinan > 1900 && alinan<=tarih ){
+if(dogdugunGun > gun && dogduguAy > ay){
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun>gun && dogduguAy < ay){
+    console.log("Şu an "+ (dogdugunGun-gun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+}else if (dogdugunGun<gun && dogduguAy>ay){
+    console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun<gun && dogduguAy<ay){
+console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else{
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+}
+
+
+
+
+
+}else{console.log("Yanlış değer girdiniz")}
+
+
+}else if (dogduguAy == 2 && (alinan%4)!=0 ){
+if(dogdugunGun>0 && dogdugunGun<=28 && alinan > 1900 && alinan<=tarih){
+
+if(dogdugunGun > gun && dogduguAy > ay){
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun>gun && dogduguAy < ay){
+    console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+}else if (dogdugunGun<gun && dogduguAy>ay){
+    console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun<gun && dogduguAy<ay){
+console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else{
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+}
+    
+
+
+}else{console.log("Yanlış değer girdiniz")}
+
+} else if ((dogduguAy%2==1)){
+    if(dogdugunGun<=31 && dogdugunGun >0 && alinan > 1900 && alinan<=tarih){
+
+
+if(dogdugunGun > gun && dogduguAy > ay){
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun>gun && dogduguAy < ay){
+    console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+}else if (dogdugunGun<gun && dogduguAy>ay){
+    console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun<gun && dogduguAy<ay){
+console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else{
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+}
+
+
+
+    }else{console.log("Yanlış değer girdiniz")}
+
+
+
+} else {
+    if(dogdugunGun<=30 && dogdugunGun>0 && alinan > 1900 && alinan<=tarih){
+if(dogdugunGun > gun && dogduguAy > ay){
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun>gun && dogduguAy < ay){
+    console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+}else if (dogdugunGun<gun && dogduguAy>ay){
+    console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else if (dogdugunGun<gun && dogduguAy<ay){
+console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+
+
+}else{
+console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+}
+
+
+
+
+
+    }
+
+
+
+}
+}else {console.log("Yanlış değer girdiniz")}
+}else{console.log("Yanlış değer girdiniz")}
+
+}
+
+
+
+
+
+
+
+
