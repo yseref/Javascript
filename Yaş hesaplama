@@ -53,7 +53,7 @@ console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " 
 
 
 }else if (dogdugunGun>gun && dogduguAy < ay){
-    console.log("Şu an "+ (dogdugunGun-gun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+    console.log("Şu an "+ (gun+30-dogdugunGun) + " Gün " + (ay-dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
 
 }else if (dogdugunGun<gun && dogduguAy>ay){
     console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
@@ -82,7 +82,7 @@ console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " 
 
 
 }else if (dogdugunGun>gun && dogduguAy < ay){
-    console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
+    console.log("Şu an "+ (dogdugunGun-gun) + " Gün " + (dogduguAy+12-ay) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
 
 }else if (dogdugunGun<gun && dogduguAy>ay){
     console.log("Şu an "+ (dogdugunGun + 30 - gun) + " Gün " + (ay - dogduguAy) + " Ay " + (tarih-alinan) + " Yaşındasınız ")
@@ -163,11 +163,5 @@ console.log("Şu an "+ (gun-dogdugunGun) + " Gün " + (ay - dogduguAy) + " Ay " 
 }else{console.log("Yanlış değer girdiniz")}
 
 }
-
-
-
-
-
-
 
 
