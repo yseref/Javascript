@@ -1,0 +1,521 @@
+
+bosluk = "\n"
+
+while (true){
+    let girilendeger = prompt("Sadece tyt'ye mi girdiniz?")
+    let alinan = girilendeger.toLocaleLowerCase()
+if( alinan == "evet" || alinan == "eve" || alinan == "ev" || alinan == "e"){
+alert("TYT hesaplama başlıyor...")
+let Matematiknettyt = DogruYanlisNetmattrtyt("Matematik")
+let turkcenettyt = DogruYanlisNetmattrtyt("Türkçe")
+let SosyalTytnet = DogruYanlisNetsosfen("Sosyal Bilgiler")
+let FenTytNet = DogruYanlisNetsosfen ("Fen Bilimleri")
+console.log("------------------ TYT ------------------")
+console.log("Toplam netiniz: " + (Matematiknettyt + FenTytNet + SosyalTytnet + turkcenettyt) + " Ham puanınız: " + ((100 +(Matematiknettyt+turkcenettyt)*3.3)))
+OBPBİLGİlendirme()
+let Onay = confirm ("Onaylıyor musunuz?")
+if (Onay == true){
+let kirikobp = confirm("Obpniz kırık mı? (kırık ise kırık olmayan notunuzu giriniz")
+let OBP = Number(prompt("Obpnizi veya Diploma notunuzu giriniz: "))
+if (kirikobp == true){
+while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.06)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4)))
+break;
+}else{ alert (hata())}
+}
+}else {
+    while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.6)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4)))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.12)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4)))
+break;
+}else{ alert (hata())}
+
+    }
+
+}
+
+
+}else {alert ("Onaylamadığınız için sistemden çıkış yapıldı!")
+    break;
+}
+break;
+
+
+
+}else if (alinan == "hayır" || alinan == "hayı" || alinan == "hay" || alinan == "ha" || alinan == "h" ){
+alert("TYT hesaplama başlıyor")
+console.log("------------------ TYT ------------------")
+let Matematiknettyt = DogruYanlisNetmattrtyt("Matematik")
+let turkcenettyt = DogruYanlisNetmattrtyt("Türkçe")
+let SosyalTytnet = DogruYanlisNetsosfen("Sosyal Bilgiler")
+let FenTytNet = DogruYanlisNetsosfen ("Fen Bilimleri")
+let Alan = prompt("Hangi bölüm öğrencisisiniz?").toLocaleLowerCase()
+while(true){
+if (Alan == "sayısal" || Alan == "sayısa" || Alan == "sayıs" || Alan == "sayı" || Alan == "say" || Alan == "sa"){
+console.log("Toplam netiniz: " + (Matematiknettyt+turkcenettyt+SosyalTytnet+FenTytNet) + " Ham puanınız: " + ((100 +(Matematiknettyt+turkcenettyt)*3.3)))
+console.log("-----------------------------------------------------------------------")
+let aytmatnet = MatAyt()
+let Fiziknetayt = Fiziknet()
+let Kimyanetayt = kimyaaytnet()
+let BiyoloiNetayt = Biyolojiaytnet()
+OBPBİLGİlendirme() 
+let Onay = confirm ("Onaylıyor musunuz?")
+if (Onay == true){
+let kirikobp = confirm("Obpniz kırık mı? (kırık ise kırık olmayan notunuzu giriniz")
+let OBP = Number(prompt("Obpnizi veya Diploma notunuzu giriniz: "))
+if (kirikobp == true){
+while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(Fiziknetayt*2.85)+(BiyoloiNetayt*3.07)+(Kimyanetayt*3.07)))))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.06)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4)))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.06)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(Fiziknetayt*2.85)+(BiyoloiNetayt*3.07)+(Kimyanetayt*3.07)))))
+break;
+}else{(hata())}
+}
+}else {
+    while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.6)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4)))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.6)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(Fiziknetayt*2.85)+(BiyoloiNetayt*3.07)+(Kimyanetayt*3.07)))))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.12)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.12)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(Fiziknetayt*2.85)+(BiyoloiNetayt*3.07)+(Kimyanetayt*3.07)))))
+break;
+}else{(hata())}
+
+    }
+
+}
+console.log("-----------------------------------------------------------------------")
+
+
+
+
+}
+break;
+}else if (alinan == "e" || alinan == "eş" || alinan == "eşi" || alinan == "eşit" || alinan == "eşit a" || alinan == "eşit ağ" || alinan == "eşit ağı"|| alinan== "eşit ağır" || alinan== "eşit ağırl" || alinan== "eşit ağırlı" || alinan == "eşit ağırlık"){
+console.log("Toplam netiniz: " + (Matematiknettyt+turkcenettyt+SosyalTytnet+FenTytNet) + " Ham puanınız: " + ((100 +(Matematiknettyt+turkcenettyt)*3.3)))
+console.log("-----------------------------------------------------------------------")
+let aytmatnet = MatAyt()
+let edbnetayt = edbnetayt()
+let tar1netayt = tar1net()
+let cog1Netayt = cog1net()
+OBPBİLGİlendirme() 
+let Onay = confirm ("Onaylıyor musunuz?")
+if (Onay == true){
+let kirikobp = confirm("Obpniz kırık mı? (kırık ise kırık olmayan notunuzu giriniz")
+let OBP = Number(prompt("Obpnizi veya Diploma notunuzu giriniz: "))
+if (kirikobp == true){
+while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)))))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.06)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.06)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)))))
+break;
+}else{(hata())}
+}
+}else {
+    while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.6)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.6)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)))))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.12)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.12)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytmatnet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)))))
+break;
+}else{(hata())}
+
+    }
+
+}
+console.log("-----------------------------------------------------------------------")
+
+
+
+
+}
+break;
+
+
+}else if (alinan == "sö" || alinan =="söz" ||alinan=="söze" || alinan == "sözel"){
+
+console.log("Toplam netiniz: " + (Matematiknettyt+turkcenettyt+SosyalTytnet+FenTytNet) + " Ham puanınız: " + ((100 +(Matematiknettyt+turkcenettyt)*3.3)))
+console.log("-----------------------------------------------------------------------")
+let aytfelsefenet = felsefeAyt()
+let edbnetayt = edbnetayt()
+let tar1netayt = tar1net()
+let cog1Netayt = cog1net()
+let cog2Netayt = cog2net()
+let tar2netayt = tar2net()
+let dinkulturu = dinnet()
+
+
+OBPBİLGİlendirme() 
+let Onay = confirm ("Onaylıyor musunuz?")
+if (Onay == true){
+let kirikobp = confirm("Obpniz kırık mı? (kırık ise kırık olmayan notunuzu giriniz")
+let OBP = Number(prompt("Obpnizi veya Diploma notunuzu giriniz: "))
+if (kirikobp == true){
+while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytfelsefenet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)+ (cog2Netayt*2.9)+(tar2netayt*2.9) + (dinkulturu*3)))))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.06)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.06)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytfelsefenet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)+ (cog2Netayt*2.9)+(tar2netayt*2.9) + (dinkulturu*3)))))
+break;
+}else{(hata())}
+}
+}else {
+    while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.6)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.6)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytfelsefenet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)+ (cog2Netayt*2.9)+(tar2netayt*2.9) + (dinkulturu*3)))))
+break;
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.12)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.12)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytfelsefenet*3)+(edbnetayt*3)+(tar1netayt*2.8)+(cog1Netayt*3.3)+ (cog2Netayt*2.9)+(tar2netayt*2.9) + (dinkulturu*3)))))
+break;
+}else{(hata())}
+
+    }
+
+}
+console.log("-----------------------------------------------------------------------")
+
+
+
+
+}
+break;
+
+}else if (alinan == "d" || alinan == "di" || alinan == "dil"){
+
+console.log("Toplam netiniz: " + (Matematiknettyt+turkcenettyt+SosyalTytnet+FenTytNet) + " Ham puanınız: " + ((100 +(Matematiknettyt+turkcenettyt)*3.3)))
+console.log("-----------------------------------------------------------------------")
+let aytdilnet = dilydt()
+
+OBPBİLGİlendirme() 
+let Onay = confirm ("Onaylıyor musunuz?")
+if (Onay == true){
+let kirikobp = confirm("Obpniz kırık mı? (kırık ise kırık olmayan notunuzu giriniz")
+let OBP = Number(prompt("Obpnizi veya Diploma notunuzu giriniz: "))
+if (kirikobp == true){
+while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.3)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytdilnet*3)))))
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.06)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.06)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytdilnet*3)))))
+}else{(hata())}
+}
+}else {
+    while(true){
+if(OBP>=50 && OBP<=100){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.6)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.6)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytdilnet*3)))))
+break;
+break;
+} else if (OBP>100 && OBP<=500){
+console.log("TYT yerleştirme puanınız: " + (OBP*0.12)+100+((Matematiknettyt+turkcenettyt)*3.3)+((FenTytNet+SosyalTytnet)*3.4))
+console.log(("Ayt yerleştirme puanınız: " + ((OBP*0.12)+(100+((Matematiknettyt+turkcenettyt)*1.32)+((FenTytNet+SosyalTytnet)*1.36)+(aytdilnet*3)))))
+
+    }
+
+}
+console.log("-----------------------------------------------------------------------")
+
+
+
+
+}
+break;
+
+
+
+
+
+
+}
+}}}
+
+break;
+}
+
+function DogruYanlisNetmattrtyt(ders){
+    while(true){
+let dogru = Number(prompt( ders +" testindeki doğru sayınızı giriniz"))
+if(dogru<=40){
+let yanlis = Number(prompt( ders +  " testindeki yanlış sayınızı giriniz"))
+if(dogru+yanlis<=40){
+    console.log(ders + " Doğru sayınız: " + dogru + " " + ders + " Yanlış sayınız: " + yanlis )
+return (dogru-(yanlis/4));
+}else{
+alert("Yanlış değer girdiniz,lütfen tekrar deneyin!")
+
+}
+    }else {hata()}
+}}
+
+
+
+
+
+function DogruYanlisNetsosfen (ders){
+while(true){
+let dogru = Number(prompt( ders +" testindeki doğru sayınızı giriniz"))
+if(dogru<=20){
+let yanlis = Number(prompt( ders +  " testindeki yanlış sayınızı giriniz"))
+if(dogru+yanlis<=20){
+console.log (ders + " Doğru sayınız: " + dogru + " " + ders + " Yanlış sayınız: " + yanlis )
+return dogru-(yanlis/4);
+}else{
+hata()
+}
+} else {hata ()}
+}
+}
+
+function hata(){
+alert("Yanlış değer girdiniz,lütfen tekrar deneyiniz!")
+
+
+}
+
+
+function OBPBİLGİlendirme(){
+
+let obpBilgilendirme = `
+🎓 OBP (Ortaöğretim Başarı Puanı) Hakkında Bilgilendirme
+
+✅ OBP, lise başarınıza göre YKS puanınıza eklenen katkıdır.  
+✅ OBP yalnızca bazı durumlarda yarıya düşer (kırılır).
+
+📌 OBP Hangi Durumlarda Kırılır?
+1. Aynı alandaki bölümü tercih edip kazanırsanız  
+   (Örn: Bilişim lisesi → Bilgisayar Mühendisliği).
+2. Daha önce bir örgün üniversite programına (önlisans/lisans) yerleştiyseniz.  
+   → Kayıt yaptırmasanız bile OBP kırılır.
+
+📌 OBP Hangi Durumlarda Kırılmaz?
+- Açıköğretim kazanırsanız.
+- Sadece sınava girip hiçbir yere yerleşmezseniz.
+- Alan dışı bölümleri yazarsanız.
+
+ℹ️ Özet: OBP sadece daha önce yerleştiyseniz ya da alanınızla aynı bölümü tekrar yazarsanız kırılır.
+`;
+
+alert(obpBilgilendirme)}
+
+function MatAyt(){
+    while(true){
+let AYTmatdogru = Number(prompt("Ayt matematik tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTmatdogru<=40){
+let AytMatYanlis = Number(prompt("AYT matematik testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTmatdogru+AytMatYanlis<=40){
+console.log("AYT matematik tesindeki doğru sayınız: " + AYTmatdogru  + "AYT matematik tesindeki yanlış sayınız: " + AytMatYanlis)
+return (AYTmatdogru-(AytMatYanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+
+    function Fiziknet(){
+while(true){
+let Fizikdogru = Number(prompt("AYT Fizik testinde yaptığınız doğru sayısını yazınız"))
+if(Fizikdogru<=14){
+let Fizikyanlis = Number(prompt("AYT Fizik testinde yaptığınız yanlış sayısını yazınız"))
+if(Fizikdogru+Fizikyanlis<=14){
+console.log("AYT Fizik tesindeki doğru sayınız: " + Fizikdogru  + "AYT Fizik tesindeki yanlış sayınız: " + Fizikyanlis)
+return (Fizikdogru-(Fizikyanlis/4));
+}else{hata()}
+
+
+}else{hata()}
+
+
+}
+
+
+
+    }
+    function kimyaaytnet(){
+        while (true){
+let aytkimyadogru = Number(prompt("AYT Kimya testinde yaptığınız doğru sayısını yazınız"))
+if(aytkimyadogru<=13){
+let aytkimyayanlis = Number(prompt("AYT Kimya testinde yaptığınız yanlış sayısını yazınız"))
+if(aytkimyadogru+aytkimyayanlis<=13){
+console.log("AYT Kimya tesindeki doğru sayınız: " + aytkimyadogru  + "AYT Kimya tesindeki yanlış sayınız: " + aytkimyayanlis)
+return (aytkimyadogru-(aytkimyayanlis/4))
+
+}else{(hata())}
+
+
+}else{(hata())}
+
+
+        }}
+
+
+        function Biyolojiaytnet(){
+while(true){
+let Biyoaytdogru = Number(prompt("AYT Biyoloji testinde yaptığınız doğru sayısını yazınız"))
+if(Biyoaytdogru<=13){
+let Biyoaytyanlis = Number(prompt(("AYT Biyoloji testinde yaptığınız yanlış sayısını yazınız")))
+if(Biyoaytdogru+Biyoaytyanlis<=13){
+console.log("AYT Biyoloji tesindeki doğru sayınız: " + Biyoaytdogru  + "AYT Biyoloji tesindeki yanlış sayınız: " + Biyoaytyanlis)
+return (Biyoaytdogru-(Biyoaytyanlis/4));
+
+
+
+}else{hata()}
+
+}else{hata()}
+
+
+
+}
+
+
+
+        }
+
+        function dogruyazi(ders){
+
+
+let art = "AYT " + ders + "testindeki doğru sayınız"
+        }
+
+    function yanlisyazi (ders){
+
+let art = "AYT " + ders + "testindeki yanlış sayınız"
+
+
+    }
+function Edbayt(){
+    while(true){
+let AYTedbdogru = Number(prompt("Ayt Edebiyat tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTedbdogru<=24){
+let AytedbYanlis = Number(prompt("AYT Edebiyat testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTedbdogru+AytedbYanlis<=24){
+console.log("AYT Edebiyat tesindeki doğru sayınız: " + AYTedbdogru  + "AYT Edebiyat tesindeki yanlış sayınız: " + AytedbYanlis)
+return (AYTedbdogru-(AytedbYanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+    function tar1net(){
+    while(true){
+let AYTtar1dogru = Number(prompt("Ayt Tarih-1 tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTtar1dogru<=10){
+let Ayttar1Yanlis = Number(prompt("AYT Tarih-1 testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTtar1dogru+Ayttar1Yanlis<=10){
+console.log("AYT Tarih-1 tesindeki doğru sayınız: " + AYTtar1dogru  + "AYT Tarih-1 tesindeki yanlış sayınız: " + Ayttar1Yanlis)
+return (AYTtar1dogru-(Ayttar1Yanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+
+        function cog1net(){
+    while(true){
+let AYTcog1dogru = Number(prompt("Ayt Coğrafya-1 tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTcog1dogru<=6){
+let Aytcog1Yanlis = Number(prompt("AYT Coğrafya-1 testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTcog1dogru+Aytcog1Yanlis<=6){
+console.log("AYT Coğrafya-1 tesindeki doğru sayınız: " + AYTcog1dogru  + "AYT Coğrafya-1 tesindeki yanlış sayınız: " + Aytcog1Yanlis)
+return (AYTcog1dogru-(Aytcog1Yanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+
+    
+        function cog2net(){
+    while(true){
+let AYTcog2dogru = Number(prompt("Ayt Coğrafya-2 tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTcog2dogru<=11){
+let Aytcog2Yanlis = Number(prompt("AYT Coğrafya-2 testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTcog2dogru+Aytcog2Yanlis<=11){
+console.log("AYT Coğrafya-2 tesindeki doğru sayınız: " + AYTcog2ogru  + "AYT Coğrafya-1 tesindeki yanlış sayınız: " + Aytcog2Yanlis)
+return (AYTcog2dogru-(Aytcog2Yanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+
+    
+    function tar2net(){
+    while(true){
+let AYTtar2dogru = Number(prompt("Ayt Tarih-2 tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTtar2dogru<=11){
+let Ayttar2Yanlis = Number(prompt("AYT Tarih-2 testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTtar2dogru+Ayttar2Yanlis<=11){
+console.log("AYT Tarih-2 tesindeki doğru sayınız: " + AYTtar2dogru  + "AYT Tarih-2 tesindeki yanlış sayınız: " + Ayttar2Yanlis)
+return (AYTtar2dogru-(Ayttar2Yanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+
+    
+    function dinnet(){
+    while(true){
+let AYTdindogru = Number(prompt("Ayt Din Kültürü ve Ahlak Bilgisi tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTdindogru<=6){
+let AytdinYanlis = Number(prompt("AYT Din Kültürü ve Ahlak Bilgisi testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTtar1dogru+Ayttar1Yanlis<=6){
+console.log("AYT Din Kültürü ve Ahlak Bilgisi tesindeki doğru sayınız: " + AYTdindogru  + "AYT Din Kültürü ve Ahlak Bilgisi tesindeki yanlış sayınız: " + AytdinYanlis)
+return (AYTdindogru-(AytdinYanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+    function felsefeAyt(){
+    while(true){
+let AYTfelsefedogru = Number(prompt("Ayt Felsefe Grubu tesintden yaptığınız doğru sayısını yazınız"))
+if(AYTfelsefedogru<=12){
+let AytfelsefeYanlis = Number(prompt("AYT Felsefe Grubu testinden yaptığınız yanlış sayısını yazınız"))
+if(AYTfelsefedogru+AytfelsefeYanlis<=12){
+console.log("AYT Felsefe Grubu tesindeki doğru sayınız: " + AYTfelsefedogru  + "AYT Felsefe Grubu tesindeki yanlış sayınız: " + AytfelsefeYanlis)
+return (AYTfelsefedogru-(AytfelsefeYanlis/4));
+}else{hata()}
+}else{hata()}
+    }}
+
+
+
+
+
+
+
+function dilydt(){
+    while(true){
+let ydtdogru = Number(prompt("YDT Edebiyat tesintden yaptığınız doğru sayısını yazınız"))
+if(ydtdogru<=40){
+let ydtYanlis = Number(prompt("YDT Edebiyat testinden yaptığınız yanlış sayısını yazınız"))
+if(ydtdogru+ydtYanlis<=40){
+console.log("YDT tesindeki doğru sayınız: " + ydtdogru  + "YDT tesindeki yanlış sayınız: " + ydtYanlis)
+return (ydtdogru-(ydtYanlis/4));
+}else{hata()}
+}else{hata()}
+}}
